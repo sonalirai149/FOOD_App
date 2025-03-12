@@ -1,0 +1,78 @@
+/* Main restaurant card container */
+.res-card {
+    width: 260px; /* Smaller width for better layout */
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+/* Hover effect to slightly lift the card */
+.res-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Restaurant image */
+.res-img {
+   width: 100% !important;
+    height: 200px !important; /* Set a fixed height for consistency */
+    object-fit:inherit; /* Ensures images are well-sized */
+    border-radius: 12px 12px 0 0;
+}
+
+/* Card content */
+.card-content {
+    padding: 12px;
+    text-align: left;
+}
+
+/* Restaurant name */
+.res-name {
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 4px;
+    overflow-wrap: break-word !important;
+    /* display: block; */
+}
+
+/* Cuisine details */
+.res-cuisine {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 6px;
+    display: block;
+}
+
+/* Cost and delivery time section */
+.res-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+/* Rating badge */
+.res-rating {
+    background-color: #48c479;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 13px;
+    display: inline-block;
+}
+
+/* Location */
+.city {
+    font-size: 12px;
+    color: #444;
+    margin-top: 4px;
+}

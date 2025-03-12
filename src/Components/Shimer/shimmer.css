@@ -1,0 +1,16 @@
+.shimmer_container{
+    display: flex;
+    flex-wrap: wrap;
+    width:250px;
+}
+
+.shimmer_sec{
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 15px;
+    width: 250px;  /* Adjust width as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Soft shadow for effect */
+    background-color: #f0f0f0;
+    transition: transform 0.2s ease;  
+}

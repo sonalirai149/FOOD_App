@@ -1,0 +1,76 @@
+.cart {
+    display: flex;
+    flex-direction: column; /* Ensures items stack vertically */
+    align-items: center; /* Centers items horizontally */
+    justify-content: center; /* Centers items vertically */
+    width: 900px;
+    margin: 0 auto; /* Centers the container itself */
+}
+
+.cartI {
+    font-size: large;
+    text-align: center; /* Centers text inside elements */
+    margin-top: 20px;
+    padding: 10px; /* Ensures better spacing */
+}
+.clear-btn{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6347;
+    color: white;
+    cursor: pointer;
+}
+.checkout-summary {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.checkout-summary h2, .checkout-summary h3, .checkout-summary h4 {
+    margin: 10px 0;
+}
+
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.pay-btn {
+    background: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+
+.close-btn {
+    background: #ff6347;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background: green;
+}
+.checkout-btn{
+    background: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+

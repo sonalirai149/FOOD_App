@@ -1,0 +1,187 @@
+/* Body container styles */
+.Body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+/* Container for the main content */
+.Container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Search bar styling */
+.search {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.Rescard {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    max-width: 300px; /* Ensure proper width */
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.search-box {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+/* Button styles */
+/* button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+} */
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Restaurant list container with responsive layout */
+
+
+.restaurant-list > div {
+    flex-basis: 30%;
+}
+
+/* Restaurant list container */
+.restaurant-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Exactly 3 cards per row */
+    gap: 20px; /* Adds spacing between cards */
+    justify-content: center;
+    padding: 20px;
+}
+/* Ensure cards don’t stretch too much */
+
+
+/* Link styles - makes the Rescard clickable */
+.restaurant-list a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.restaurant-list a:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Rescard styling inside Link */
+
+
+.Rescard h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.Rescard p {
+    font-size: 14px;
+    color: #666;
+    padding: 0 10px;
+}
+
+/* Add hover effect for the Rescard (optional if Link handles this) */
+.Rescard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Ensure the Rescard's content is centered and aligned properly */
+.Rescard-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.search-filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+  .search-bar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .search-box {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .search-btn, .filter-btn, .reset-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6347;
+    color: white;
+    cursor: pointer;
+  }
+  .filter-buttons{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .search-btn:hover, .filter-btn:hover, .reset-btn:hover {
+    background-color: #e5533d;
+  }
+  
+  .restaurant-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .no-results {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .error-container {
+    text-align: center;
+    color: red;
+  }
+  .Rescard img {
+    width: 100%;
+    height: 500px; /* Set a fixed height for consistency */
+    object-fit:inherit; /* Ensures images are well-sized */
+    border-radius: 12px 12px 0 0;
+}
+.extra-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 10px; /* Ensure spacing */
+  font-size: 16px;
+}
+
+  

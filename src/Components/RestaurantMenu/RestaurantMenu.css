@@ -1,0 +1,62 @@
+/* RestaurantMenu.css */
+.restaurant-menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+}
+
+.restaurant-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.restaurant-name {
+    font-size: 2rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.restaurant-cuisines {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.restaurant-cost {
+    font-size: 1rem;
+    color: #999;
+}
+
+.menu-section {
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-title {
+    font-size: 1.8rem;
+    color: #444;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.menu-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-item {
+    font-size: 1.2rem;
+    color: #555;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}

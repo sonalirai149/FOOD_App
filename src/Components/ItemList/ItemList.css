@@ -1,0 +1,117 @@
+.item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid gray; /* Adds separator */
+}
+
+/* Left section (Item details) */
+.item-details {
+    flex: 1;
+}
+
+/* Name & Price in One Line */
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 16px;
+    flex-direction: column;
+    gap: 5px; 
+}
+
+/* Price Styling */
+.item-price {
+    color: green;
+    font-weight: bold;
+    padding-right: 400px;
+}
+
+/* Description Styling */
+.item-description {
+    font-size: 14px;
+    color: #555;
+    margin-top: 4px;
+}
+
+/* Right section (Image + Button) */
+.item-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; /* Space between image & button */
+    position:relative;
+}
+
+/* Image Styling */
+.item-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Button Styling */
+.add-button {
+    padding: 6px 12px;
+    background-color: #ff6347; /* Tomato color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s ease-in-out;
+    position:absolute;
+    margin-top: 80px;
+}
+
+.add-button:hover {
+    background-color: #e5533d;
+}
+.counter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70px;
+    height: 20px;
+    padding: 4px 4px;
+    border: 2px solid gray;
+    border-radius: 8px;
+    background-color: white;
+    color:green;
+
+
+}
+.DecInc{
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    font-weight: bold;
+    border-radius: 50%;
+
+}
+.DecInc:hover{
+    background-color:lightgray;
+}
+.inc:hover {
+    background-color: lightgreen;
+}
+
+.dec:hover {
+    background-color: lightcoral;
+}
+.count {
+    font-size: 18px;
+    font-weight: bold;
+}

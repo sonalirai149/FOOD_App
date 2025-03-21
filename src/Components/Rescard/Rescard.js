@@ -5,6 +5,8 @@ import UserContext from "../../utils/UserContext.js";
 const Rescard = ({resdata}) => {
     const { name, cuisines, cloudinaryImageId, avgRating, costForTwo, sla, areaName } = resdata.info;
     const {loggedInUser}=useContext(UserContext)
+   // const storedUser=JSON.parse(localStorage.getItem("loggedInUser"));
+
 
     return (
         <div className="res-card">
@@ -17,7 +19,7 @@ const Rescard = ({resdata}) => {
             </div>
             <div className="card-content">
                 <p className="res-name ">{name}</p>
-                <h4 children className="">User:{loggedInUser}</h4>
+                {/* <h4 children className="">{loggedInUser.name}</h4> */}
                 <p className="res-cuisine">{cuisines?.join(", ")}</p>
                 <div className="res-info ">
                     <span className="res-rating ">⭐ {avgRating}</span>

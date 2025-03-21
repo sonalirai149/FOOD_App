@@ -11,6 +11,7 @@ import "./index.css";
 import { Provider } from "react-redux";
 import AppStore from "./utils/AppStore.js";
 import UserContext from "./utils/UserContext.js";
+import LoginForm from "./Components/LogIn/LoginForm.jsx";
 
 // ✅ Lazy Load Grocery Component
 const Grocery = lazy(() => import("./Components/NavComponents/Grocery/Grocery.js"));
@@ -18,15 +19,20 @@ const Grocery = lazy(() => import("./Components/NavComponents/Grocery/Grocery.js
 // ✅ Layout Component
 const Layout = () => {
   const [Username, setUserName] = useState("");
+  const [email,setUserEmail] = useState("");
+  const[password,setPassword] =useState("");
 
   useEffect(() => {
-    // Simulate an API call to get the user name
-    const data = { name: "Sonali" };
-    setUserName(data.name);
+    // Retrieve user data from localStorage
+    const storedUser = JSON.parse(localStorage.getItem("loggedInUser"));
+    if (storedUser) {
+      setUserName(storedUser.name || "");
+      setUserEmail(storedUser.email || "");
+      setPassword(storedUser.password || "");
+    }
   }, []);
-
   return (
-    <UserContext.Provider value={{ loggedInUser: Username ,setUserName}}>
+    <UserContext.Provider value={{ loggedInUser:{name: Username ,email:email,password:password},setUserName,setUserEmail,setPassword}}>
       <Provider store={AppStore}>
         <div>
           <Nav />
@@ -56,6 +62,8 @@ const AppRouter = createBrowserRouter([
           </Suspense>
         ),
       },
+      
+
     ],
     errorElement: <Error />,
   },

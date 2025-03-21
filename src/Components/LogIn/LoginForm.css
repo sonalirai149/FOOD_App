@@ -1,0 +1,415 @@
+/* General Wrapper Style */
+.wrapper1 {
+    position: relative;
+    width: 400px;
+    height: 850px;
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    color: #ff6347;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+    transition: height 0.3s ease-in-out;
+}
+.form-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateX(100%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p a {
+    color: #ff6347;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
+
+.wrapper1 .form-box.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Transition states for different forms */
+.wrapper1 .form-box.login.active {
+    transform: translateX(0);
+}
+
+.wrapper1 .form-box.register.active {
+    transform: translateX(0);
+}
+
+.wrapper1 .form-box.reset.active {
+    transform: translateX(0);
+}
+
+
+/* Active State - Register Form */
+.wrapper1.active {
+    height: 850px; /* Height when register form is active */
+}
+
+/* Reset Password Form */
+.wrapper1.reset {
+    height: 300px; /* Adjust height for reset form */
+}
+
+/* Transition and Positioning for Forms */
+.wrapper1 .form-box {
+    position: absolute;
+    width: 100%;
+    padding: 40px;
+    transition: transform 0.3s ease;
+    z-index: 1; /* Base z-index */
+}
+
+/* Login Form Position */
+.wrapper1 .form-box.login {
+    transform: translateX(0);
+    z-index: 3; /* Higher z-index for visible form */
+}
+
+/* Register Form Position */
+.wrapper1 .form-box.register {
+    transform: translateX(100%);
+    z-index: 2; /* Lower z-index to be behind the login form */
+}
+
+.wrapper1.active .form-box.register {
+    transform: translateX(0);
+}
+
+.wrapper1.active .form-box.login {
+    transform: translateX(-100%);
+}
+
+/* Reset Password Form Position */
+.wrapper1.reset .form-box.reset {
+    transform: translateX(0);
+    z-index: 3; /* Ensure reset form is on top */
+ } 
+
+.wrapper1.reset .form-box.login {
+    transform: translateX(100%);
+    z-index: 2;
+}
+
+.wrapper1.reset .form-box.register {
+    transform: translateX(100%);
+    z-index: 1;
+} 
+
+/* General Form Box Styling */
+.wrapper1 .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+/* Form Header */
+form h1 {
+    font-size: 30px;
+    text-align: center;
+}
+/* Form Box Styling */
+.form-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateX(100%);
+    z-index: 1;
+}
+
+.wrapper1 .form-box.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Wrapper Height Adjustments */
+.wrapper1.active {
+    height: 850px;
+}
+.wrapper1.reset {
+    height: 300px;
+}
+.custom-select {
+    position: relative;
+    width: 100%;
+  }
+  
+  .custom-select select {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid  #ff4c30;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #ff4c30;
+    padding: 20px 45px 20px 20px;
+    -webkit-appearance: none; /* Remove default styling in WebKit browsers */
+    -moz-appearance: none; /* Remove default styling in Firefox */
+    appearance: none; /* Remove default styling in other browsers */
+    text-align: left; /* Align text to the left */
+    cursor: pointer;
+  }
+  
+  .custom-select::after {
+    content: '▼'; /* Customize the dropdown arrow */
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color:  #ff4c30;
+    pointer-events: none; /* Ensure the arrow does not interfere with clicks */
+  }
+  
+  /* Style the placeholder option */
+  .custom-select select option:first-child {
+    color:  #ff4c30 /* Placeholder color */
+  }
+  .custom-select select:invalid {
+    color: #ff4c30;; /* Placeholder color */
+  }
+/* Form Input Styling */
+.input-box1 {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center; /* Center content inside */
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.input-box1 input {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    font-size: 16px;
+    color: #ff6347;
+    padding: 10px 45px 10px 15px; /* Extra right padding for icon space */
+    outline: none;
+    transition: border-color 0.3s ease;
+    border: #ff4c30 solid;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.input-box1 input:focus {
+    border-color: #ff4c30;
+    box-shadow: 0 0 10px rgba(255, 99, 71, 0.5);
+}
+.input-box1 select:focus {
+    border-color: #ff4c30;
+    box-shadow: 0 0 10px rgba(255, 99, 71, 0.5);
+}
+.input-box1 .icon {
+    position: absolute;
+    right: 15px; /* Keeps icon stuck to the right */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Prevents interaction */
+}
+
+
+
+/* Button Styling */
+form button {
+    width: 100%;
+    height: 45px;
+    background: #ff6347;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background: #ff4c30;
+    transform: translateY(-2px);
+}
+
+form button:active {
+    background: green;
+    transform: scale(0.98);
+}
+form .remember-forgot {
+    display: flex;
+    direction: column;
+    justify-content: space-between;
+    font-size: 14.5px;
+}
+
+.remember-forgot label input {
+    accent-color: #ff4c30;
+    margin-right: 4px;
+    left: 15px;
+}
+
+.remember-forgot p a {
+    color: #ff4c30;
+    text-decoration: none;
+    
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    max-width: 400px;
+    width: 100%;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ff6347;
+}
+
+.modal-close:hover {
+    color: #ff4c30;
+}
+.remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 999; /* Ensure it's layered above the form but below the modal content */
+  }
+  
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the modal */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /* Ensure the modal content is above the overlay */
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .line{
+    border-bottom: 1px solid gray;
+  }
+  .other {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Adds spacing between elements */
+    margin: 20px 0;
+  }
+  
+  .other p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .google {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .google button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .google-icon {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  
+  .google button:hover {
+    border-color: #f47e6c;
+    background-color: #fff;
+    color: #333;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  

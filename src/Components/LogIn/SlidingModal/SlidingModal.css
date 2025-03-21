@@ -1,0 +1,31 @@
+.slide-modal {
+    position: fixed;
+    top: 0;
+    right: -400px; /* Initially hidden */
+    width: 400px; /* Adjust width to your needs */
+    height: 100%;
+    background-color: white;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .slide-modal.open {
+    right: 0; /* Slide in when open */
+  }
+  
+  .modal-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensure it fills the height of the modal */
+    box-sizing: border-box;
+  }
+  
+  .close-button {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }

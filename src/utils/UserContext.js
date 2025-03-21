@@ -1,7 +1,15 @@
 import { createContext } from "react";
 
 const UserContext=createContext({
-    loggedInUser: "",
+    loggedInUser:{
+        name:"",
+        email:"",
+        password:"",
+    },
+    setUserName: () => {},  // Placeholder function
+    setUserEmail: () => {}, 
+    setPassword: () => {}, 
+    
 });
 
 export default UserContext;

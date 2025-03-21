@@ -92,13 +92,13 @@ const Section = () => {
   {/* <input type="text" className="p-2 border rounded-lg focus:ring w-9 h-12/9" placeholder="Search restaurant" />
   <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Search</button> */}
 </div>
-            <input
+            {/* <input
               type="text"
-              value={loggedInUser}
+              value={loggedInUser.name}
               className="extra-input"
               onChange={(e) => setUserName(e.target.value)}
               placeholder="Enter username"
-            />
+            /> */}
           </div>
 
           <div className="filter-buttons">
